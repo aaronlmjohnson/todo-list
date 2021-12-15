@@ -1,0 +1,9 @@
+Todo list 
+
+Todo cards should include
+    *title
+    *description
+    *dueDate
+    *priorty
+    *notes
+    *checklist
