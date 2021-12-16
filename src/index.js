@@ -4,8 +4,9 @@ import { cardElement } from './CardElement'
 
 
 const data = todoCardData("workout", "go to the gym to workout", "Friday");
+const content = document.getElementById("content");
+const card = cardElement(data).create();
 
-const card = cardElement(data);
+content.appendChild(card);
 
-card.create();
 
