@@ -1,10 +1,9 @@
-import { div } from './div';
-import { uList } from './uList';
+import { div } from './dom/div';
+import { uList } from './dom/uList';
 import { cardContent } from './cardContent'
 
 export const cardElement = (cardData)=>{
-    //take the card Data and create cards out of it by outputting
-    //each element in a list/paragraphs within a div
+
     const attributes = cardData.getAttributes();
     const content = document.getElementById("content");
     const create = ()=>{
