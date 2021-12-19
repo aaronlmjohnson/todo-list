@@ -1,6 +1,6 @@
 import { formInputValidator } from './formInputValidator';
 
-export const formInput = (name, type, label)=>{
+export const formInput = (name, type, label ="")=>{
 
     if(!formInputValidator.isValid(type))
         throw 'invalid form input';
