@@ -4,12 +4,12 @@ import { cardContent } from './cardContent'
 
 export const cardElement = (cardData)=>{
 
-    const attributes = cardData.getAttributes();
+    // const attributes = cardData.getAttributes();// change this too tightly coupled
     const content = document.getElementById("content");
     
     const _create = ()=>{
         const card = div("card", false).get();
-        const cardElementsArr = cardContent(attributes).get();
+        const cardElementsArr = cardContent(cardData).get();
         const cardElementsList = uList("card-elements", true);
 
         cardElementsArr.forEach((element)=>{
