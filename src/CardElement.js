@@ -6,7 +6,8 @@ export const cardElement = (cardData)=>{
 
     const attributes = cardData.getAttributes();
     const content = document.getElementById("content");
-    const create = ()=>{
+    
+    const _create = ()=>{
         const card = div("card", false).get();
         const cardElementsArr = cardContent(attributes).get();
         const cardElementsList = uList("card-elements", true);
@@ -19,7 +20,11 @@ export const cardElement = (cardData)=>{
         return card;
     }
 
+    const _card = _create();
+
+    const get = ()=> _card;
+
     return {
-        create
+        get
     };
 }

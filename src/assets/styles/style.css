@@ -48,7 +48,12 @@ table {
 }
 /***********************************/
 
-
 .card {
     border: 1px solid black;
+}
+
+#card-create {
+	border: 1px solid black;
+	width: 250px;
+	padding: 10px;
 }

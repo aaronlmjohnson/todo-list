@@ -5,7 +5,7 @@ export const paragraph = (name, unique, text)=>{
     else
         _paragraph.classList.add(name);
 
-    _paragraph.innerText = text;
+    _paragraph.textContent = text;
 
     const get = ()=> _paragraph;
     

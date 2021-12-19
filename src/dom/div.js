@@ -1,14 +1,13 @@
-export const div = (name, unique)=>{
-    
-    const _div = document.createElement("div");
-
+export const div = (name, unique)=> {
+    const _element = document.createElement("div");
     if(unique)
-        _div.id = name;
+        _element.id = name;
     else
-        _div.classList.add(name);
+        _element.classList.add(name);
 
-    const get = ()=> _div
+    const get = ()=> _element;
+    
     return {
         get
     };
-}
+};
