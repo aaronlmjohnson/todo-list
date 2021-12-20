@@ -50,10 +50,21 @@ table {
 
 .card {
     border: 1px solid black;
-}
+	width: 250px;
+	padding: 10px;
+}	
 
 #card-create {
 	border: 1px solid black;
 	width: 250px;
+	height: 100px;
 	padding: 10px;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: calc(30%);
+	text-align: center;
+	background: white;
+	display: none;
 }
