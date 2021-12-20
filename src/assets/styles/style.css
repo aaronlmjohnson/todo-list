@@ -48,13 +48,13 @@ table {
 }
 /***********************************/
 
-.card {
+.task {
     border: 1px solid black;
 	width: 250px;
 	padding: 10px;
 }	
 
-#card-create {
+#task-create {
 	border: 1px solid black;
 	width: 250px;
 	height: 100px;

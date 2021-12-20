@@ -1,9 +1,9 @@
-export const cardContent = (cardData)=>{
+export const taskContent = (taskData)=>{
 
     const _contentArr = [];
-    for(const data in cardData){
+    for(const data in taskData){
         const element = document.createElement("p");
-        element.innerText = `${data}: ${cardData[data]}`;
+        element.innerText = `${data}: ${taskData[data]}`;
         _contentArr.push(element);
     }
 

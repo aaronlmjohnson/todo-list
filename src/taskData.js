@@ -1,4 +1,4 @@
-export const todoCardData = (formData)=>{
+export const taskData = (formData)=>{
     const _createKeyName = (idName)=> idName.split('-')[1];
     
     const _setAttributes = ()=>{
