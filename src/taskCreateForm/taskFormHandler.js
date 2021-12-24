@@ -1,5 +1,5 @@
-import { taskData } from './taskData';
-import { taskElement } from './taskElement';
+import { taskData } from '../taskContent/taskData';
+import { taskElement } from '../taskContent/taskElement';
 import { processTaskFormData } from './processTaskFormData';
 import { getTaskFormData } from './getTaskFormData';
 

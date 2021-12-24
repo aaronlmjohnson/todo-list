@@ -1,5 +1,5 @@
-import { form } from './dom/form';
-import { formInput } from './dom/formInput';
+import { form } from '/src/dom/form.js';
+import { formInput } from '/src/dom/formInput';
 
 export const taskCreateForm = ()=>{
     const _form = form("#", "#", "task-create");

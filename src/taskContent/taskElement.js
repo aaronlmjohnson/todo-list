@@ -1,5 +1,5 @@
-import { div } from './dom/div';
-import { uList } from './dom/uList';
+import { div } from '../dom/div';
+import { uList } from '../dom/uList';
 import { taskContent } from './taskContent'
 
 export const taskElement = (taskData)=>{

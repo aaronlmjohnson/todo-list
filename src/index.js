@@ -1,6 +1,6 @@
 import './assets/styles/style.css';
-import { taskCreateForm } from './taskCreateForm';
-import { taskFormHandler } from './taskFormHandler';
+import { taskCreateForm } from './taskCreateForm/taskCreateForm';
+import { taskFormHandler } from './taskCreateForm/taskFormHandler';
 import { button } from './dom/button';
 
 const content = document.getElementById("content");
