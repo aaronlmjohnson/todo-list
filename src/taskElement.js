@@ -3,8 +3,6 @@ import { uList } from './dom/uList';
 import { taskContent } from './taskContent'
 
 export const taskElement = (taskData)=>{
-
-    // const attributes = cardData.getAttributes();// change this too tightly coupled
     const content = document.getElementById("content");
     
     const _create = ()=>{
