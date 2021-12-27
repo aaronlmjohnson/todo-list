@@ -8,13 +8,16 @@ export const taskFormHandler = ()=>{
     const addTaskFormButton = document.getElementById('task-form-button');
     const cancelButton = document.getElementById('cancel');
 
-    const content = document.getElementById('content');
+    
+    
     formButton.addEventListener('click', (e)=>{
         e.preventDefault();
+        const project = document.getElementById('active-project');
         const form = document.getElementById('task-create');
         const formTaskData = processTaskFormData(getTaskFormData());
         const dataForTaskCreation = taskData(formTaskData).get();
-        content.appendChild(taskElement(dataForTaskCreation).get());
+        project.appendChild(taskElement(dataForTaskCreation).get());
+        
         form.style.display = 'none';
     });
 

@@ -4,7 +4,7 @@ export const uList = (name, unique)=>{
     if(unique)
         _uList.id = name
     else
-        _uList.classList.add = name;
+        _uList.classList.add(name);
 
     const add = (className = "", content)=>{
         const li = document.createElement("li");
