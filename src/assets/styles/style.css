@@ -47,7 +47,11 @@ table {
 	border-spacing: 0;
 }
 /***********************************/
-
+#content {
+	display: grid;
+	height: 100%;
+	grid-template-columns: 1fr 5fr;
+}
 .task {
 	display: flex;
 	flex-direction: column;
@@ -55,7 +59,10 @@ table {
 	width: 250px;
 	padding: 10px;
 }	
-
+#task-form-button {
+	grid-row: 2;
+	height: 3vh;
+}
 #task-create {
 	border: 1px solid black;
 	width: 250px;
@@ -68,4 +75,17 @@ table {
 	text-align: center;
 	background: white;
 	display: none;
+}
+
+#project-sidebar{
+	height: 97vh;
+	background: rgb(46, 46, 119);
+}
+
+#project-sidebar h1 {
+	font-family: Arial;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	color: white;
 }
