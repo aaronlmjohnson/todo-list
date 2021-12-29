@@ -6,7 +6,7 @@ export const projectSidebar = ()=>{
     const _projects = document.getElementsByClassName("project");
     const _header = header(1, "Projects");
     _sideBar.appendChild(_header.get());
-
+    
     const get = ()=> _sideBar;
 
     return {

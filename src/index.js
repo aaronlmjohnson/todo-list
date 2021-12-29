@@ -4,6 +4,7 @@ import { taskFormHandler } from './taskCreateForm/taskFormHandler';
 import { button } from './dom/button';
 import { projectElement } from './todoProjects/projectElement';
 import { projectSidebar } from './todoProjects/projectSidebar';
+import { addProjectsToSidebar } from './todoProjects/addProjectsToSidebar';
 
 const content = document.getElementById("content");
 const defaultProject = projectElement("default");
@@ -18,6 +19,8 @@ content.appendChild(defaultProject.get());
 
 content.appendChild(taskForm);
 taskFormHandler();
+const sidebarUpdater = addProjectsToSidebar();
+sidebarUpdater.update();
 
 
 

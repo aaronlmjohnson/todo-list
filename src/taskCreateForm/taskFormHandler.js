@@ -12,12 +12,12 @@ export const taskFormHandler = ()=>{
     
     formButton.addEventListener('click', (e)=>{
         e.preventDefault();
-        const project = document.getElementById('active-project');
+        const project = document.getElementsByClassName('active-project')[0];
         const form = document.getElementById('task-create');
         const formTaskData = processTaskFormData(getTaskFormData());
         const dataForTaskCreation = taskData(formTaskData).get();
         project.appendChild(taskElement(dataForTaskCreation).get());
-        
+
         form.style.display = 'none';
     });
 
