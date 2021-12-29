@@ -89,3 +89,12 @@ table {
 	font-weight: bold;
 	color: white;
 }
+
+.project-link {
+	color: white;
+	text-decoration: none;
+}
+
+.project-link:active { 
+	color: cyan;
+}

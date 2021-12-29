@@ -5,10 +5,10 @@ import { button } from './dom/button';
 import { projectElement } from './todoProjects/projectElement';
 import { projectSidebar } from './todoProjects/projectSidebar';
 import { addProjectsToSidebar } from './todoProjects/addProjectsToSidebar';
+import { projectLinkHandler } from './todoProjects/projectLinkHandler';
 
 const content = document.getElementById("content");
-const defaultProject = projectElement("default");
-defaultProject.setAsActiveProject();
+const defaultProject = projectElement("default", true);
 
 const taskForm = taskCreateForm().get();
 const addTaskFormButton = button("task-form-button", true, "Add Task").get();
@@ -21,6 +21,7 @@ content.appendChild(taskForm);
 taskFormHandler();
 const sidebarUpdater = addProjectsToSidebar();
 sidebarUpdater.update();
+
 
 
 
