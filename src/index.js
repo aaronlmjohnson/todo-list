@@ -1,18 +1,19 @@
 import './assets/styles/style.css';
 
-import  { input } from './dom/input';
-import  { label } from './dom/label';
-import { inputWithLabel } from './dom/inputWithLabel';
+import { form } from './dom/form';
+import { formItem } from './dom/formItem';
 
 
-const textField = input("username", "text");
-const textFieldLabel = label(textField, "Username: ");
+
+const newProjectForm = form('#', '#', 'create-project');
 
 const content = document.getElementById("content");
 
-const usernameField = inputWithLabel(textFieldLabel, textField);
+const title = formItem("title", "text", "Title: ");
 
-content.append(usernameField);
+newProjectForm.addFormItem(title);
+
+content.append(newProjectForm.get());
 
 
 

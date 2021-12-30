@@ -4,8 +4,12 @@ export const form = ((action = "#", method = "#", name = "form")=>{
     _element.method = method;
     _element.id = name;
 
-    _element.appendChild(_inputList.get());
+    const addFormItem = (formItem)=> _element.append(formItem);
+    const get = ()=> _element;
 
-    return _element;
+    return {
+        addFormItem,
+        get
+    };
 });
 
