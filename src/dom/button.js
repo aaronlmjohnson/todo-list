@@ -6,10 +6,6 @@ export const button = (name, unique, value)=> {
         _element.id = name;
     else
         _element.classList.add(name);
-
-    const get = ()=> _element;
     
-    return {
-        get
-    };
+    return _element;
 };

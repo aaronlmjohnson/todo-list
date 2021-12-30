@@ -1,26 +1,18 @@
 import './assets/styles/style.css';
-import { taskCreateForm } from './taskCreateForm/taskCreateForm';
-import { taskFormHandler } from './taskCreateForm/taskFormHandler';
-import { button } from './dom/button';
-import { projectElement } from './todoProjects/projectElement';
-import { projectSidebar } from './todoProjects/projectSidebar';
-import { addProjectsToSidebar } from './todoProjects/addProjectsToSidebar';
-import { projectLinkHandler } from './todoProjects/projectLinkHandler';
+
+import  { input } from './dom/input';
+import  { label } from './dom/label';
+import { inputWithLabel } from './dom/inputWithLabel';
+
+
+const textField = input("username", "text");
+const textFieldLabel = label(textField, "Username: ");
 
 const content = document.getElementById("content");
-const defaultProject = projectElement("default", true);
 
-const taskForm = taskCreateForm().get();
-const addTaskFormButton = button("task-form-button", true, "Add Task").get();
-const sidebar = projectSidebar();
-content.appendChild(sidebar.get());
-content.appendChild(addTaskFormButton);
-content.appendChild(defaultProject.get());
+const usernameField = inputWithLabel(textFieldLabel, textField);
 
-content.appendChild(taskForm);
-taskFormHandler();
-const sidebarUpdater = addProjectsToSidebar();
-sidebarUpdater.update();
+content.append(usernameField);
 
 
 

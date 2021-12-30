@@ -5,9 +5,5 @@ export const div = (name, unique)=> {
     else
         _element.classList.add(name);
 
-    const get = ()=> _element;
-    
-    return {
-        get
-    };
+    return _element;
 };
