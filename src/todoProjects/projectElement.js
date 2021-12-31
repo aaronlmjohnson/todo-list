@@ -7,7 +7,7 @@ export const projectElement = (name,  defaultProject = false)=>{
     const _header = header(1, string.titleCase(name), 'project-header');
     _element.id = name;
 
-    if(defaultProject) _element.classList.add("displayed");
+    if(defaultProject) _element.classList.add("active");
 
     _element.append(_header);
 

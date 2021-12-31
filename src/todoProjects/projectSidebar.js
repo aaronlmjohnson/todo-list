@@ -5,7 +5,7 @@ import { button } from '../dom/button';
 
 export const projectSidebar = ()=>{
     const _sideBar = div("project-sidebar", true);
-    const _projects = div("project-links", false);
+    const _projects = div("project-links", true);
     const _header = header(1, "Projects");
     //const _addProjectBtn = button("project-form-button", true, "New Project").get();
     
