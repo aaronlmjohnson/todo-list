@@ -4,18 +4,13 @@ import { button } from '../dom/button';
 
 
 export const projectSidebar = ()=>{
-    const _sideBar = div("project-sidebar", true).get();
-    const _projects = div("projects", false).get();
-    const _header = header(1, "Projects").get();
-    const _addProjectBtn = button("project-form-button", true, "New Project").get();
+    const _sideBar = div("project-sidebar", true);
+    const _projects = div("project-links", false);
+    const _header = header(1, "Projects");
+    //const _addProjectBtn = button("project-form-button", true, "New Project").get();
     
-    [_header, _projects, _addProjectBtn].forEach((element)=> _sideBar.appendChild(element));
+    [_header, _projects].forEach((element)=> _sideBar.append(element));
 
 
-    const getSideBar = ()=> _sideBar;
-    const getProjectsSect = ()=> _projects;
-    return {
-        getSideBar,
-        getProjectsSect
-    }
+    return _sideBar;
 };
