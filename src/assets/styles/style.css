@@ -113,9 +113,14 @@ table {
 	border: 1px solid cyan;
 	color: white;
 }
-.projects {
+#project-links {
 	display: flex;
 	flex-direction: column;
+	gap: 5px;
+}
+
+.inactive { 
+	display: none;
 }
 
 #create-project {
