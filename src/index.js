@@ -4,7 +4,7 @@ import './assets/styles/style.css';
 import { projectSidebar } from './todoProjects/projectSidebar';
 import { projectElement } from './todoProjects/projectElement';
 import { projectLinkHandler } from './todoProjects/projectLinkHandler';
-import { newProjectButton } from './todoProjects/newProjectButton';
+
 import { newProjectButtonHandler } from './todoProjects/newProjectButtonHandler';
 
 const content = document.getElementById("content");
@@ -15,7 +15,6 @@ const choresProject = projectElement("chores", false);
 
 content.append(activeProject);
 content.append(choresProject);
-projectSidebar.append(newProjectButton);
 
 projectLinkHandler();
 newProjectButtonHandler();
