@@ -129,3 +129,24 @@ table {
 	width: 250px;
 	padding: 10px;
 }
+
+#new-project-button {
+	color: white;
+	font-weight: bold;
+	background: none;
+	border: 0;
+	padding: 0;
+	font-size: 12px;
+}
+
+#new-project-button:hover {
+	background: green;
+}
+
+#new-project-button:active{
+	background: cyan;
+}
+
+#new-project-form {
+	
+}
