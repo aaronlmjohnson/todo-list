@@ -17,13 +17,6 @@ content.append(choresProject);
 projectLinkHandler();
 newProjectButtonHandler();
 
-//content.append(newProjectForm.get());
-
-/*
-    We can create new projects and add them to the side bar, but clicking on the link doesn't select it.
-    We still need to set it to the default project as well after creation. 
-*/
-
 
 
 
