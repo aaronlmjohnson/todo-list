@@ -1,6 +1,5 @@
 export const setNewActiveProject = (currentProject, newProject)=>{
     if(currentProject == newProject) return;
-
     currentProject.classList.remove("active");
     newProject.classList.remove("inactive");
 
