@@ -139,14 +139,22 @@ table {
 	font-size: 12px;
 }
 
-#new-project-button:hover {
+#cancel-project-button{
+	color: white;
+	font-weight: bold;
+	background: none;
+	border: 0;
+	padding: 0;
+	font-size: 12px;
+	width: 50px;
+}
+
+#new-project-button:hover, #cancel-project-button:hover {
 	background: green;
 }
 
-#new-project-button:active{
+#new-project-button:active, #cancel-project-button:active{
 	background: cyan;
 }
 
-#new-project-form {
-	
-}
+

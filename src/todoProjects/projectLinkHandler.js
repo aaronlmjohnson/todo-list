@@ -1,7 +1,8 @@
 import { addEventListener } from "../dom/addEventListener";
 import { setNewActiveProject } from "./setNewActiveProject";
 export const projectLinkHandler = ()=>{
-    
+
+    window.onload = ()=>{
     const _selectProject = (e)=>{
         if(!e.target.classList.contains('project-link')) return;
 
@@ -15,5 +16,5 @@ export const projectLinkHandler = ()=>{
 
         addEventListener(window, 'click', _selectProject);
 
-    
+    }
 };
