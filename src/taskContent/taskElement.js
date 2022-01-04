@@ -1,28 +1,14 @@
 import { div } from '../dom/div';
-import { uList } from '../dom/uList';
-import { taskContent } from './taskContent'
+import { createTaskElementContent } from './createTaskElementContent';
 
-export const taskElement = (taskData)=>{
-    const content = document.getElementById("content");
+export const taskElement = (title, description, date, priority)=>{
+    const  _element = div("task", false);
+    const types = ["title", "description","date","priority"];
     
-    const _create = ()=>{
-        const task = div("task", false).get();
-        const taskElementsArr = taskContent(taskData).get();
-        const taskElementsList = uList("task-elements", true);
+    [title, description, date, priority].forEach((item, i)=> {
+        createTaskElementContent(_element, item, types[i]);
+    });
+    
 
-        taskElementsArr.forEach((element)=>{
-            taskElementsList.add("task-item", element);
-        });
-       
-        task.appendChild(taskElementsList.get());
-        return task;
-    }
-
-    const _task = _create();
-
-    const get = ()=> _task;
-
-    return {
-        get
-    };
+    return _element;
 }

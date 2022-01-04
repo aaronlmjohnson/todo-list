@@ -3,6 +3,9 @@ export const paragraph = (name, unique, text)=>{
 
     if(unique)
         _element.id = name;
+    else
+        _element.classList.add(name);
 
-    _paragraph.textContent = text;   
+    _element.textContent = text;   
+    return _element;
 };
