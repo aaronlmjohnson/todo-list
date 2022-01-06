@@ -1,3 +1,3 @@
 export const cancelTaskCreation = ()=>{
-    console.log("cancel task");
+    document.getElementById("new-task-form").remove();
 }

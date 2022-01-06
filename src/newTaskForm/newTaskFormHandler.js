@@ -8,7 +8,4 @@ export const newTaskFormHandler = ()=>{
 
     addEventListener(formButton, 'click', createTaskElement);
     addEventListener(cancelButton, 'click', cancelTaskCreation);
-
-
-
 };
