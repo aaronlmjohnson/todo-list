@@ -56,15 +56,16 @@ table {
 .task {
 	display: flex;
 	flex-direction: column;
-    border: 1px solid black;
+    border: 2px solid black;
 	width: 250px;
 	padding: 10px;
+	background: white;
 }	
 #task-form-button {
 	grid-row: 2;
 	height: 3vh;
 }
-#task-create {
+#new-task-form {
 	border: 1px solid black;
 	width: 250px;
 	padding: 10px;
@@ -75,7 +76,6 @@ table {
 	top: calc(30%);
 	text-align: center;
 	background: white;
-	display: none;
 }
 
 #project-sidebar{
@@ -121,6 +121,10 @@ table {
 
 .inactive { 
 	display: none;
+}
+
+.active {
+	padding: 0 10px;
 }
 
 #create-project {

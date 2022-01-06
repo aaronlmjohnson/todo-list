@@ -4,6 +4,9 @@ import { projectElement } from './todoProjects/projectElement';
 import { projectLinkHandler } from './todoProjects/projectLinkHandler';
 import { newProjectButtonHandler } from './todoProjects/newProjectButtonHandler';
 import { taskElement } from './taskContent/taskElement';
+import { newTaskForm } from './newTaskForm/newTaskForm';
+import { newTaskFormHandler } from './newTaskForm/newTaskFormHandler';
+import { setDefaultValuesForForm } from './newTaskForm/setDefaultValuesForForm';
 
 const content = document.getElementById("content");
 
@@ -12,17 +15,21 @@ content.append(projectSidebar);
 const activeProject = projectElement("default", true);
 
 content.append(activeProject);
+activeProject.append(newTaskForm);
 
-const task = taskElement("Cake", "Eat Cake", "1/12/22", 60);
+/*
+    We can now create task elements manually. We should now attempt to create a form where we can input data that corresponds
+    to the task elements. On submit, the form will post the task element within the current active project
+ */
 
-console.log(task);
-
-/* Now that we can make projects and work with them in several ways, its time we add tasks.
-    A task element is composed of task content which is made out of several task items like title, description, date, and priority
-    start with a task item and then start adding it to the task element
-*/
+setDefaultValuesForForm();
 projectLinkHandler();
 newProjectButtonHandler();
+newTaskFormHandler();
+
+
+
+
 
 
 
