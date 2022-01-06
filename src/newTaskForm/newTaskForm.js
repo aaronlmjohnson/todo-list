@@ -10,7 +10,7 @@ export const newTaskForm = (()=>{
     const _taskPriority = formItem("priority", "range", "Priority: ");
     const _submit = formItem("submit", "submit");
     const _cancel = formItem("cancel","button", "Cancel");
-
+    
     _form.addFormItem(_taskName);
     _form.addFormItem(_taskDescription);
     _form.addFormItem(_taskDate);

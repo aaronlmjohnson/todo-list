@@ -76,6 +76,7 @@ table {
 	top: calc(30%);
 	text-align: center;
 	background: white;
+	display: none;
 }
 
 #project-sidebar{

@@ -15,14 +15,15 @@ content.append(projectSidebar);
 const activeProject = projectElement("default", true);
 
 content.append(activeProject);
-activeProject.append(newTaskForm);
+content.append(newTaskForm);
+setDefaultValuesForForm();
 
 /*
     We can now create task elements manually. We should now attempt to create a form where we can input data that corresponds
     to the task elements. On submit, the form will post the task element within the current active project
  */
 
-setDefaultValuesForForm();
+
 projectLinkHandler();
 newProjectButtonHandler();
 newTaskFormHandler();
