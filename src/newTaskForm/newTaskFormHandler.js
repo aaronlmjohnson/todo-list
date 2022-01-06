@@ -12,7 +12,7 @@ export const newTaskFormHandler = ()=>{
     
 
 
-    addEventListener(addTask, 'click', openNewTaskForm);
+    addEventListener(window, 'click', openNewTaskForm);
     addEventListener(formButton, 'click', createTaskElement);
     addEventListener(cancelButton, 'click', closeNewTaskForm);
 };
