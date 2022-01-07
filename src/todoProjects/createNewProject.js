@@ -1,3 +1,4 @@
+import { addToStorage } from "../localStorage/addToStorage";
 import { processNewProjectForm } from "./processNewProjectForm";
 import { projectElement } from "./projectElement";
 import { setNewProjectAsActive } from "./setNewProjectAsActive";
