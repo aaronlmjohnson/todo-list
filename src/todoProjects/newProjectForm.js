@@ -5,6 +5,7 @@ export const newProjectForm = (()=>{
     const _form = form('#', '#', 'new-project-form');
 
     _form.addFormItem(formItem("title", "text"));
+    _form.addFormItem(formItem('cancel-project-button', 'button', 'cancel'));
     //_form.addFormItem(formItem("submit", "submit", ));
     return _form.get();
 })();

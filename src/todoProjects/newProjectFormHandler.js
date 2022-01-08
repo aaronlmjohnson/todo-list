@@ -1,9 +1,37 @@
-import { addEventListener } from "../dom/addEventListener"
+import { addEventListener } from "../dom/addEventListener";
+import { closeNewProjectForm } from "./closeNewProjectForm";
 import { createNewProject } from "./createNewProject";
+import { getNewProjectForm } from './getNewProjectForm';
+import { processNewProjectForm } from './processNewProjectForm';
 
 export const newProjectFormHandler = ()=>{
-    const _form = document.getElementById("new-project-form");
+    const _form = getNewProjectForm();
+
+    const handler = (e)=>{
+        e.preventDefault();
+        const data = processNewProjectForm();
+
+        createNewProject(data);
+        closeNewProjectForm();
+        
+       removeFormEventListeners
+    };
+
+    const cancelButtonHandler = (e)=>{
+        if(e.target != document.getElementById('cancel-project-button')) return;
+        closeNewProjectForm();
+        
+        removeFormEventListeners();
+    }
+
+    const removeFormEventListeners = ()=>{
+        _form.removeEventListener('submit', handler);
+        _form.removeEventListener('click', cancelButtonHandler);
+    }
+
+    _form.addEventListener("submit", handler);
+    _form.addEventListener('click', cancelButtonHandler);
     
 
-    addEventListener(_form, "submit", createNewProject);
+
 };

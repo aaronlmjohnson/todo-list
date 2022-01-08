@@ -1,29 +1,19 @@
 import { addToStorage } from "../localStorage/addToStorage";
-import { processNewProjectForm } from "./processNewProjectForm";
 import { projectElement } from "./projectElement";
 import { setNewProjectAsActive } from "./setNewProjectAsActive";
 
-export const createNewProject = (e)=>{
-    e.preventDefault();
+export const createNewProject = (data)=>{
     const _content = document.getElementById("content");
-    const _data = processNewProjectForm();
-    const _form = document.getElementById("new-project-form");
+    const element = projectElement(data['title'], false);
 
-    _form.reset();
-    _form.remove();
-
-    for(let datum in _data){
-        const element = projectElement(_data[datum].toLowerCase(), false);
-        setNewProjectAsActive(element);
-        _content.append(element);
-    }
+    setNewProjectAsActive(element);
+    _content.append(element);
 
     
-    
-    //add create new project button back
-    document.getElementById("new-project-button").style.display = 'block';
-    //remove cancel new project button
-    document.getElementById("cancel-project-button").remove();
+    // //add create new project button back
+    // document.getElementById("new-project-button").style.display = 'block';
+    // //remove cancel new project button
+    // document.getElementById("cancel-project-button").remove();
 
    
 };
