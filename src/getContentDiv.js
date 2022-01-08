@@ -1,0 +1,1 @@
+export const getContentDiv = ()=> document.getElementById('content');
