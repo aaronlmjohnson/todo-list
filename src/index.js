@@ -7,11 +7,13 @@ import { newTaskFormHandler } from './newTaskForm/newTaskFormHandler';
 import { setDefaultValuesForForm } from './newTaskForm/setDefaultValuesForForm';
 import { getContentDiv } from './getContentDiv';
 import { createNewProject } from './todoProjects/createNewProject';
+import { doesProjectExist } from './todoProjects/doesProjectExist';
+import { getProject } from './todoProjects/getProject';
 
 const content = getContentDiv();
 
 createNewProject({'title': 'default'});
-
+console.log(doesProjectExist('default'));
 content.append(newTaskForm);
 
 setDefaultValuesForForm();

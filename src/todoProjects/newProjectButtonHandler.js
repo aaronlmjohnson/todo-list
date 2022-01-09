@@ -2,8 +2,6 @@ import { addEventListener } from "../dom/addEventListener";
 import { newProjectForm } from "./newProjectForm";
 import { newProjectFormHandler } from "./newProjectFormHandler";
 
-import { cancelProjectButtonHandler } from "./cancelProjectButtonHandler";
-
 export const newProjectButtonHandler = ()=>{
     const _button = document.getElementById("new-project-button");
     const displayNewProjectForm = ()=>{

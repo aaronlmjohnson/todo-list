@@ -1,4 +1,3 @@
-import { addEventListener } from "../dom/addEventListener";
 import { closeNewProjectForm } from "./closeNewProjectForm";
 import { createNewProject } from "./createNewProject";
 import { getNewProjectForm } from './getNewProjectForm';
@@ -14,7 +13,7 @@ export const newProjectFormHandler = ()=>{
         createNewProject(data);
         closeNewProjectForm();
         
-       removeFormEventListeners
+       removeFormEventListeners();
     };
 
     const cancelButtonHandler = (e)=>{
