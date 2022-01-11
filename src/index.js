@@ -24,16 +24,19 @@
 // projectLinkHandler();
 // newProjectButtonHandler();
 // newTaskFormHandler();
-import { dom } from './dom';
+import { div } from './components/dom';
+import { form } from './components/dom';
+import { header } from './components/dom';
+
 
 const content = document.getElementById('content');
-const project1 = dom.div('project', false);
-const form = dom.form('#', '#', 'test');
-form.addInput('username', 'text', 'name');
-form.addInput('add-image', 'image', 'Add Image:')
+const project1 = div('project', false);
+const newForm = form('#', '#', 'test');
+newForm.addInput('username', 'text', 'name');
+
 content.append(project1);
-project1.append(form.get());
-project1.append(dom.header(1, 'hi', 'title', true));
+project1.append(newForm.get());
+project1.append(header(1, 'hi', 'title', true));
 
 
  
