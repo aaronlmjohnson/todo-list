@@ -128,14 +128,14 @@ table {
 	padding: 0 10px;
 }
 
-#create-project {
+#create-project-form {
 	border: 1px solid black;
 	height: 100px;
 	width: 250px;
 	padding: 10px;
 }
 
-#new-project-button {
+#add-project-button {
 	color: white;
 	font-weight: bold;
 	background: none;
@@ -154,11 +154,15 @@ table {
 	width: 50px;
 }
 
-#new-project-button:hover, #cancel-project-button:hover {
+#new-project-form {
+	display: none;
+}
+
+#add-project-button:hover, #cancel-project-button:hover {
 	background: green;
 }
 
-#new-project-button:active, #cancel-project-button:active{
+#add-project-button:active, #cancel-project-button:active{
 	background: cyan;
 }
 

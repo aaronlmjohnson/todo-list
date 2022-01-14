@@ -1,18 +1,17 @@
 import { div } from './dom';
 import { header } from './dom';
-import { button } from './dom';
+import newProjectForm from './newProjectForm';
+import addProjectButton from './addProjectButton';
 
-const newProjectButton = (()=>{
-    const _element = button("new-project-button", true, "Add Project ＋");
-    return _element;
-})();
+
 
  const projectSidebar = (()=>{
     const _sideBar = div("project-sidebar", true);
     const _projects = div("project-links", true);
     const _header = header(1, "Projects");
     
-    [_header, _projects, newProjectButton].forEach((element)=> _sideBar.append(element));
+    [_header, _projects, addProjectButton].forEach((element)=> _sideBar.append(element));
+    _projects.append(newProjectForm);
 
     return _sideBar;
 })();

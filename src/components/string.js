@@ -1,6 +1,6 @@
 export const string = (()=>{
-    const titleCase = (str)=> 
-        str.split('').map((c, i)=>  i == 0 ? c.toUpperCase() : c).join('');
+    const titleCase = (str)=> str.split('').map((c, i)=>  i == 0 ? c.toUpperCase() : c).join('');
+
 
     const camelCase = (str) =>{
         return str.split('-').map((word, i)=>{
