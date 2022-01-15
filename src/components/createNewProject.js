@@ -1,8 +1,8 @@
-import { addToStorage } from "../localStorage/addToStorage";
-import { doesProjectExist } from "./doesProjectExist";
-import { projectElement } from "./projectElement";
-import { saveProject } from "./saveProject";
-import { setNewProjectAsActive } from "./setNewProjectAsActive";
+// import { addToStorage } from "../localStorage/addToStorage";
+// import { doesProjectExist } from "./doesProjectExist";
+// import { projectElement } from "./projectElement";
+// import { saveProject } from "../todoProjects/saveProject";
+// import { setNewProjectAsActive } from "../todoProjects/setNewProjectAsActive";
 
 export const createNewProject = (data)=>{
     //add more here to prevent project duplicates

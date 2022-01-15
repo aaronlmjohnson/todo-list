@@ -19,8 +19,17 @@ export const getProjectFormData = ()=>{
     return _form.get();
 })();
 
-const getNewProjectForm = ()=> document.getElementById('new-project-form');
+export const getNewProjectForm = ()=> document.getElementById('new-project-form');
 
 export const displayNewProjectForm = () => getNewProjectForm().style.display = "block";
+
+export const processNewProjectFormData = ()=>{
+    const formData = new FormData(getNewProjectForm());
+    const processedData = {};
+    for(let key of formData.entries())
+        processedData[key[0]] = key[1];
+    return processedData;
+    
+}
 
 export default newProjectForm;

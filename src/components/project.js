@@ -3,6 +3,7 @@ import addTaskButton from './addTaskButton';
 import projectLink, { addLinkToSideBar } from './projectLinks';
 import { string } from './string';
 import projects from './projects';
+import { getNewProjectForm } from './newProjectForm';
 
 const project = (data) =>{
     let _title = data['title'];
