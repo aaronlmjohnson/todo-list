@@ -22,6 +22,10 @@ export const getProjectFormData = ()=>{
 export const getNewProjectForm = ()=> document.getElementById('new-project-form');
 
 export const displayNewProjectForm = () => getNewProjectForm().style.display = "block";
+export const hideNewProjectForm = ()=> {
+    getNewProjectForm().style.display = 'none';
+    getNewProjectForm().reset();
+}
 
 export const processNewProjectFormData = ()=>{
     const formData = new FormData(getNewProjectForm());

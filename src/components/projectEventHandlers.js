@@ -2,7 +2,7 @@ import { getAddProjectButton } from "./addProjectButton";
 import { displayNewProjectForm,
      getNewProjectForm,
     processNewProjectFormData} from "./newProjectForm";
-import project, { projectElement } from "./project";
+import { createNewProject } from "./project";
 
 
 const projectEventHandlers = ()=>{
@@ -12,9 +12,8 @@ const projectEventHandlers = ()=>{
     addProjectButton.addEventListener('click', displayNewProjectForm);
     newProjectForm.addEventListener('submit', (e)=>{
         e.preventDefault();
-
         const data = processNewProjectFormData();
-        projectElement(project(data));
+        createNewProject(data);
     });
 }
 

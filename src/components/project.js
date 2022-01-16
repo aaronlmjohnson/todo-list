@@ -3,7 +3,7 @@ import addTaskButton from './addTaskButton';
 import projectLink, { addLinkToSideBar } from './projectLinks';
 import { string } from './string';
 import projects from './projects';
-import { getNewProjectForm } from './newProjectForm';
+import { hideNewProjectForm } from './newProjectForm';
 
 const project = (data) =>{
     let _title = data['title'];
@@ -40,6 +40,29 @@ export const projectElement = (project,  defaultProject = false)=>{
 export const getProjectElement = (projectId) => {
     return document.getElementById(projectId);
 }
+
+export const setNewActiveProject = (newProject, activeProject) =>{
+    console.log(activeProject);
+    newProject.classList.remove('inactive');
+    activeProject.classList.remove('active');
+    
+    newProject.classList.add('active');
+    activeProject.classList.add('inactive');
+}
+
+export const getActiveProject = ()=> document.getElementsByClassName('active')[0];
+
+export const createNewProject = (data) =>{
+    hideNewProjectForm();
+    const newProject = project(data);
+    const content = document.getElementById('content');
+    const newProjectElement = projectElement(newProject);
+
+    projects.add(newProject);
+    setNewActiveProject(newProjectElement, getActiveProject());
+    content.append(newProjectElement);
+}
+
 
 
 

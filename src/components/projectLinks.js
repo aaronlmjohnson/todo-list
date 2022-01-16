@@ -18,4 +18,10 @@ export const addLinkToSideBar = (link)=>{
 
 }
 
+export const selectProject = (e) =>{
+    if(!e.target.classList.contains('project-link')) return;
+    
+
+}
+
 export default projectLink;
