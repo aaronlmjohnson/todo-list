@@ -20,7 +20,6 @@ const project = (data) =>{
 
 export const projectElement = (project,  defaultProject = false)=>{
     const _element = div("project", false);
-
     const _header = header(1, string.titleCase(project.title()), 'project-header');
     const _addTaskButton = addTaskButton();
     
@@ -42,7 +41,11 @@ export const getProjectElement = (projectId) => {
 }
 
 export const setNewActiveProject = (newProject, activeProject) =>{
-    console.log(activeProject);
+    if(!activeProject){
+        newProject.classList.add('active');
+        return;
+    }
+    
     newProject.classList.remove('inactive');
     activeProject.classList.remove('active');
     
@@ -52,18 +55,16 @@ export const setNewActiveProject = (newProject, activeProject) =>{
 
 export const getActiveProject = ()=> document.getElementsByClassName('active')[0];
 
-export const createNewProject = (data) =>{
+export const createNewProject = (data, defaultProject = false) =>{
     hideNewProjectForm();
     const newProject = project(data);
     const content = document.getElementById('content');
-    const newProjectElement = projectElement(newProject);
+    
+    const newProjectElement = projectElement(newProject, defaultProject);
 
     projects.add(newProject);
     setNewActiveProject(newProjectElement, getActiveProject());
     content.append(newProjectElement);
 }
-
-
-
 
 export default project;

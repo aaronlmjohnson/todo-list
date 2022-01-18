@@ -1,4 +1,6 @@
-import { string } from './string'
+import { getActiveProject, setNewActiveProject, getProjectElement } from './project';
+import { string } from './string';
+
 
 const projectLink = (projectName)=>{
     const _element = document.createElement('a');
@@ -14,14 +16,20 @@ export const addLinkToSideBar = (link)=>{
     const lastElement = projectLinks.childNodes.length - 1;
     projectLinks.append(link);
     projectLinks.insertBefore(link, projectLinks.childNodes[lastElement]); // insert links before hidden new project form
-
-
 }
+
+export const getProjectLinksElement = ()=> document.getElementById('project-links');
+
 
 export const selectProject = (e) =>{
     if(!e.target.classList.contains('project-link')) return;
-    
+    const newProject = getProjectElement(string.kebabCase(e.target.textContent));
 
+    if(newProject == getActiveProject())
+        return;
+        
+    console.log(getActiveProject());
+    setNewActiveProject(newProject, getActiveProject());
 }
 
 export default projectLink;
